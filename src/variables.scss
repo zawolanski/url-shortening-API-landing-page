@@ -1,11 +1,14 @@
 // SIZES
-$mobile: 375;
-$tablet: 768;
-$desktop: 1440;
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
 
 // COLORS
+$white: hsla(0, 0%, 100%, 1);
 $cyan: hsl(180, 66%, 49%);
+$cyanHover: hsla(180, 56%, 75%, 1);
 $darkViolet: hsl(257, 27%, 26%);
+$darkVioletBG: hsla(257, 27%, 26%, 1);
 $red: hsl(0, 87%, 67%);
 $gray: hsl(0, 0%, 75%);
 $grayishViolet: hsl(257, 7%, 63%);

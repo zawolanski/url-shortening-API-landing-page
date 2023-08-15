@@ -4,4 +4,14 @@
 	import '../app.scss';
 </script>
 
-<slot />
+<div>
+	<slot />
+</div>
+
+<style lang="scss">
+	div {
+		width: 100%;
+		max-width: 111rem;
+		margin-inline: auto;
+	}
+</style>
