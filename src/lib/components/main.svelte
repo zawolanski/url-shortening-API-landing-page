@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Content from '$lib/components/content.svelte';
 	import Welcome from '$lib/components/welcome.svelte';
+	import Boost from './boost.svelte';
 </script>
 
 <main>
@@ -10,6 +11,7 @@
 	<div>
 		<Content />
 	</div>
+	<Boost />
 </main>
 
 <style lang="scss">
@@ -26,7 +28,7 @@
 			padding: 5.2rem 0;
 		}
 
-		&:last-child {
+		&:nth-child(2) {
 			background-color: $mainBG;
 			padding: 16rem 0 8rem 0;
 

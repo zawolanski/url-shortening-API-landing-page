@@ -108,7 +108,6 @@
 	}
 
 	a {
-		display: block;
 		margin-inline: auto;
 		width: fit-content;
 		font-size: 2rem;
@@ -119,7 +118,6 @@
 		border-radius: 2.8rem;
 		padding: 1.4rem 4rem;
 		margin-bottom: 16.5rem;
-		cursor: pointer;
 		transition: background-color 0.15s;
 
 		&:hover {
