@@ -77,6 +77,7 @@
 		@media (min-width: $tablet) {
 			text-align: left;
 			font-size: 5.5rem;
+			line-height: 6.5rem;
 		}
 
 		@media (min-width: $desktop) {
@@ -84,6 +85,7 @@
 			font-weight: 700;
 			letter-spacing: -0.2rem;
 			margin-bottom: 0.5rem;
+			line-height: 8rem;
 		}
 	}
 
@@ -108,6 +110,7 @@
 	}
 
 	a {
+		display: block;
 		margin-inline: auto;
 		width: fit-content;
 		font-size: 2rem;

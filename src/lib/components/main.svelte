@@ -16,9 +16,8 @@
 
 <style lang="scss">
 	div {
-		padding: 0 2.4rem 4rem;
+		padding: 0 2.4rem;
 		width: 100%;
-		overflow-x: hidden;
 
 		@media (min-width: $tablet) {
 			padding: 5.2rem 0;
@@ -28,9 +27,17 @@
 			padding: 5.2rem 0;
 		}
 
+		&:first-child {
+			overflow-x: hidden;
+
+			@media (min-width: $tablet) {
+				padding-bottom: 21.8rem;
+			}
+		}
+
 		&:nth-child(2) {
 			background-color: $mainBG;
-			padding: 16rem 0 8rem 0;
+			padding: 0 0 8rem;
 
 			@media (min-width: $desktop) {
 				padding-bottom: 12rem;

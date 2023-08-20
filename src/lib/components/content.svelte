@@ -4,9 +4,11 @@
 	import Records from '$lib/assets/icon-detailed-records.svelte';
 	import Customizable from '$lib/assets/icon-fully-customizable.svelte';
 	import Line from './line.svelte';
+	import Form from './form.svelte';
 </script>
 
 <div>
+	<Form />
 	<h2>Advanced Statistics</h2>
 	<p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
 	<div class="tiles">
