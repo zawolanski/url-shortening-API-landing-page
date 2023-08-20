@@ -22,6 +22,7 @@
 		width: 100%;
 		max-width: 111rem;
 		margin-inline: auto;
+		fill: $veryDarkBlue;
 
 		@media (min-width: $tablet) {
 			padding: 5.2rem 2.4rem;
@@ -30,6 +31,7 @@
 		@media (min-width: $desktop) {
 			padding: 5.2rem 0;
 		}
+
 	}
 
 	nav {
