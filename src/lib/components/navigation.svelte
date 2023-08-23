@@ -24,7 +24,7 @@
 		z-index: 999;
 		list-style-type: none;
 		margin: 0;
-		background-color: $darkVioletBG;
+		background-color: $darkViolet;
 		padding: 4rem 2.4rem;
 		border-radius: 1rem;
 		top: 9.6rem;

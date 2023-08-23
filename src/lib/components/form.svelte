@@ -1,28 +1,10 @@
 <script lang="ts">
+	import Links from './links.svelte';
+	import { urls } from '../store/localStorage';
+	import type { ShortlyResponse } from '$lib/types';
+
 	const URL = 'https://api.shrtco.de/v2/';
-	const LS_KEY = 'shortly_urls';
 	let isError = false;
-
-	interface URL {
-		originalLink: string;
-		shortLink: string;
-	}
-
-	interface ShortlyResponse {
-		ok: boolean;
-		result: {
-			code: string;
-			full_share_link: string;
-			full_short_link: string;
-			full_short_link2: string;
-			full_short_link3: string;
-			original_link: string;
-			share_link: string;
-			short_link: string;
-			short_link2: string;
-			short_link3: string;
-		};
-	}
 
 	const handleSubmit = async (e: SubmitEvent) => {
 		if (!e.target) return null;
@@ -45,18 +27,14 @@
 					const { ok, result }: ShortlyResponse = await response.json();
 
 					if (ok === true) {
-						const urls: URL[] = JSON.parse(localStorage.getItem(LS_KEY) ?? '') ?? [];
-						if (!urls.some((link) => link.originalLink === result.original_link)) {
-							localStorage.setItem(
-								LS_KEY,
-								JSON.stringify([
-									...urls,
-									{
-										originalLink: result.original_link,
-										shortLink: result.full_short_link2
-									}
-								])
-							);
+						if (!$urls.some((link) => link.originalLink === result.original_link)) {
+							urls.set([
+								...$urls,
+								{
+									originalLink: result.original_link,
+									shortLink: result.full_short_link2
+								}
+							]);
 						}
 					}
 				} catch (e) {
@@ -82,6 +60,7 @@
 		</div>
 		<button type="submit">Shorten It!</button>
 	</form>
+	<Links />
 </section>
 
 <style lang="scss">
@@ -99,11 +78,12 @@
 		flex-direction: column;
 		gap: 1.6rem;
 		padding: 2.4rem;
-		background-color: $darkVioletBG;
+		background-color: $darkViolet;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: top right;
 		background-image: url('../assets/bg-shorten-mobile.svg');
+		margin-bottom: 2.4rem;
 
 		@media (min-width: $tablet) {
 			flex-direction: row;
@@ -166,6 +146,11 @@
 		font-size: 1.8rem;
 		font-weight: 700;
 		cursor: pointer;
+		transition: background-color 0.15s;
+
+		&:hover {
+			background-color: $cyanHover;
+		}
 
 		@media (min-width: $tablet) {
 			width: 18.8rem;

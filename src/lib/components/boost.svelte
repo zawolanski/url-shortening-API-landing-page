@@ -1,8 +1,3 @@
-<script lang="ts">
-	import bgSmall from '../assets/bg-boost-mobile.svg';
-	console.log(bgSmall);
-</script>
-
 <div>
 	<h2>Boost your links today</h2>
 	<a href="/">Get Started</a>
@@ -14,7 +9,7 @@
 		align-items: center;
 		flex-direction: column;
 		padding: 9rem 3.7rem;
-		background-color: $darkVioletBG;
+		background-color: $darkViolet;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
